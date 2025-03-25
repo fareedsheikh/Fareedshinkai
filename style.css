@@ -1,0 +1,3912 @@
+/* --------------------------------------Fonts-------------------------------------------------- */
+
+
+
+/* Reset defaults */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+:root {
+    /* --------------Fonts------------------------------------ */
+
+    --Headings-font: "Cinzel", serif;
+    --Sub-Headings-font: "Playfair Display", serif;
+    --body: "Libre Baskerville", serif;
+
+    /* --------------Font-Size------------------------------------ */
+
+    --Paragraph-size: 22px;
+    --sub-headings: 32;
+
+    /* --------------Colors------------------------------------ */
+
+    --Primary-Color: #000000;
+    --Secondary-Color: #ffffff;
+    --tertiary-color: #C9B037;
+    --tertiary-Light-color: #FFD700;
+    --Platinum-Color: #C0C0C0;
+    --Grey-Color: #989898;
+
+    /* --------------Z Index------------------------------------ */
+
+    --Z-End: -1;
+    --Z-Start: 1;
+    --Z-middel: 10;
+    --Z-front: 20;
+}
+
+/* Body & Scroll Container */
+html,
+body {
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    letter-spacing: 2px;
+    color: var(--Primary-Color);
+}
+
+
+[data-scroll-container] {
+    position: relative;
+}
+
+
+
+
+
+
+
+
+
+.about_p span{
+    color: var(--tertiary-color);
+}
+
+.tes span{
+    color: var(--tertiary-color);
+    
+}
+
+#whyiam2 span{
+    color: var(--tertiary-Light-color);
+}
+
+.answer .yellow_email a{
+    color: var(--tertiary-Light-color)!important;
+    text-decoration: underline;
+
+}
+
+
+
+/* ------------------------------preloader----------------------------- */
+
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--Primary-Color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+#greeting {
+    color: var(--tertiary-color);
+    font-size: 2rem;
+    font-weight: bold;
+    opacity: 0;
+}
+
+main {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    position: relative;
+}
+
+/* --------------------------------------------menu---------------------------------------- */
+
+#menu {
+    height: 100vh;
+    width: 100%;
+    background: var(--Primary-Color);
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translateY(-100%);
+    overflow: hidden;
+}
+
+/* Centering Links */
+#menu .links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 110vh;
+}
+
+#menu .links a {
+    font-family: var(--Headings-font);
+    font-weight: 600;
+    letter-spacing: 12px;
+    font-size: 100px;
+    margin: 10px 0;
+    color: var(--Secondary-Color);
+    text-decoration: none;
+    transition: all ease-in .4s;
+}
+
+#menu .links a:hover {
+    color: var(--tertiary-Light-color);
+}
+
+/* ---------------------------------------------hero---------------------------------------- */
+
+
+#hero {
+    height: 100vh;
+    position: relative;
+    background: var(--Secondary-Color);
+}
+
+nav {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: var(--Z-Start);
+}
+
+nav .button a {
+    font-family: var(--Sub-Headings-font);
+    font-size: 18px;
+    color: var(--Secondary-Color);
+    background: var(--Primary-Color);
+    padding: 6px 18px;
+    border-radius: 5%;
+    border: 1px solid var(--Platinum-Color);
+    margin: 0px 50px;
+    transition: all .6s ease;
+    font-weight: 500;
+}
+
+nav .button a:hover {
+    color: var(--Primary-Color);
+    box-shadow: inset 150px 0px 0px 0px var(--tertiary-Light-color);
+}
+
+nav .name_logo {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+}
+
+nav .name_logo h1 {
+    font-family: var(--Headings-font);
+    font-size: 40px;
+    letter-spacing: 10px;
+    color: var(--primary-Color);
+    transition: color 0.6s ease-in-out;
+    text-align: center;
+    transition: color 0.6s ease-in-out;
+}
+
+nav .hamburger {
+    position: fixed;
+    top: 4%;
+    left: 95%;
+    cursor: pointer;
+}
+
+nav .hamburger .line {
+    background: var(--Primary-Color);
+    width: 40px;
+    height: 3px;
+    margin: 9px 0;
+    transition: 0.3s;
+}
+
+nav .hamburger .m_line {
+    opacity: 0;
+}
+
+#hero .hero_content {
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#hero .hero_content h1 {
+    font-family: var(--Headings-font);
+    color: var(--Primary-Color);
+    font-size: 45px;
+    font-weight: normal;
+    letter-spacing: 3px;
+}
+
+#hero .hero_content h2 {
+    font-family: var(--sub-headings-font);
+    color: var(--tertiary-color);
+    font-size: 32px;
+    font-weight: normal;
+    letter-spacing: 1px;
+}
+
+#Social_icons {
+    display: flex;
+    position: relative;
+    z-index: var(--Z-Start);
+}
+
+#communication_icons {
+    display: flex;
+    position: relative;
+    z-index: var(--Z-Start);
+}
+
+#communication_icons .icons {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 89%;
+    left: 97%;
+    z-index: var(--Z-Start);
+}
+
+#Social_icons .icons {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    position: fixed;
+    top: 95%;
+    left: 1%;
+    z-index: var(--Z-Start);
+}
+
+#communication_icons .icons a i {
+    font-size: 25px;
+    color: var(--Primary-Color);
+    margin: 8px 0px;
+    transition: .3s all ease-in;
+}
+
+#Social_icons .icons a i {
+    font-size: 25px;
+    color: var(--Primary-Color);
+    margin: 0 9px;
+    transition: .3s all ease-in;
+}
+
+#communication_icons .icons a i:hover {
+    color: var(--tertiary-color) !important;
+}
+
+#Social_icons .icons a i:hover {
+    color: var(--tertiary-color) !important;
+}
+
+
+/* -------------------------------------------------About---------------------------------- */
+
+
+
+
+
+#about_me_heading {
+    height: 100vh;
+    position: relative;
+    /* background: var(--Primary-Color); */
+}
+
+.a_heading span {
+    display: flex;
+    flex-direction: column;
+    transition: color 0.5s ease;
+}
+
+.a_heading .about_span {
+    margin-left: 100px;
+}
+
+.a_heading .me_span {
+    text-align: right;
+    margin-right: 200px;
+}
+
+.a_heading span {
+    font-size: 250px;
+    line-height: 290px;
+    font-family: var(--Headings-font);
+    font-weight: 900;
+    letter-spacing: 20px;
+    color: transparent;
+    /* Make the text itself transparent */
+    -webkit-text-stroke: 2px var(--Secondary-Color);
+    /* Add a black border/stroke around the text */
+}
+
+
+.about_me_content {
+    height: 100vh;
+    /* background: var(--Secondary-Color); */
+}
+
+#about_me_hook {
+    height: 100vh;
+    /* background: var(--Primary-Color); */
+}
+
+.side_spans {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    margin: 0 40px;
+}
+
+.side_spans span {
+    width: 175vw;
+    text-align: center;
+    font-size: 22px;
+    font-family: var(--sub-headings-font);
+    color: var(--Secondary-Color);
+}
+
+.about_hook_spans {
+    padding: 100px 0px;
+}
+
+.about_hook_spans span {
+    font-size: 90px;
+    display: flex;
+    flex-direction: column;
+    letter-spacing: 10px;
+    font-family: var(--Headings-font);
+    letter-spacing: 10px;
+}
+
+.about_hook_spans .Crafting {
+    font-size: 110px;
+    line-height: 70px;
+    color: var(--Platinum-Color);
+    margin-left: 7VW;
+}
+
+.about_hook_spans .Premium {
+    font-size: 130px;
+    line-height: 160px;
+    color: var(--tertiary-Light-color);
+    margin-left: 30VW;
+    font-weight: 600;
+}
+
+.about_hook_spans .digital {
+    font-size: 70px;
+    line-height: 70px;
+    color: var(--Platinum-Color);
+    margin-left: 20VW;
+}
+
+.about_hook_spans .inspired {
+    font-size: 70px;
+    line-height: 100px;
+    color: var(--Platinum-Color);
+    margin-left: 7VW;
+}
+
+.about_hook_spans .nature {
+    font-size: 100px;
+    line-height: 190px;
+    color: var(--tertiary-Light-color);
+    margin-left: 30VW;
+    font-weight: 600;
+}
+
+#about_me_content {
+    height: 100vh;
+}
+
+.a_content {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 6vw;
+}
+
+.about_btn {
+    height: 78vh;
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.about_btn a span {
+    color: var(--Grey-Color);
+    font-family: var(--Headings-font);
+    display: flex;
+    flex-direction: column;
+    font-size: 28px;
+    text-align: center;
+    transition: .4s ease all;
+}
+.about_btn a span:hover {
+    color: var(--tertiary-color);
+}
+
+.span_hed {
+    display: flex;
+    flex-direction: column;
+}
+
+#about_me_content .hed {
+    color: var(--Grey-Color);
+    font-family: var(--Headings-font);
+    letter-spacing: 3px;
+    font-size: 40px;
+    font-weight: 600;
+    margin-top: 50px;
+}
+
+#about_me_content .Strategist {
+    color: var(--tertiary-color);
+    font-family: var(--sub-headings-font);
+    letter-spacing: 3px;
+    font-size: 30px;
+    line-height: 80px;
+    font-weight: 500;
+}
+
+#about_me_content .innovate {
+    color: var(--primary-color);
+    font-family: var(--sub-headings-font);
+    letter-spacing: 2px;
+    font-size: 25px;
+    line-height: 12px;
+    font-weight: 500;
+}
+
+.about_p {
+    width: 50%;
+    color: var(--primary-color);
+    font-family: var(--body);
+    letter-spacing: 1px;
+    font-size: 18px;
+    line-height: 32px;
+    font-weight: 500;
+    margin-top: 40px;
+}
+
+#skill_heading {
+    height: 100vh;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    /* background: var(--Primary-Color); */
+}
+
+#skill_heading span {
+    font-size: 180px;
+    line-height: 200px;
+    font-family: var(--Headings-font);
+    font-weight: 900;
+    letter-spacing: 20px;
+    color: transparent;
+    /* Make the text itself transparent */
+    -webkit-text-stroke: 2px var(--Secondary-Color);
+    /* Add a black border/stroke around the text */
+}
+
+#skill_heading .Mastery {
+    font-size: 150px;
+}
+
+#s_l {}
+
+.s_l_heading {
+    font-size: 45px;
+    font-family: var(--Headings-font);
+    font-weight: 600;
+    letter-spacing: 10px;
+    color: var(--Grey-Color);
+    margin: 80px 0px;
+    margin-right: 300px;
+}
+
+.s_p_heading {
+    font-size: 45px;
+    font-family: var(--Headings-font);
+    font-weight: 600;
+    letter-spacing: 10px;
+    color: var(--Grey-Color);
+    margin: 80px 0px;
+    margin-right: 600px;
+}
+
+.s_l_content {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 80px;
+
+}
+
+#s_p_content {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+
+}
+
+.s_l_content .s_l_colomn {
+    /* height: 100vh; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.s_l_content .s_l_colomn .soft {
+    font-size: 35px;
+    line-height: 80px;
+    font-family: var(--Headings-font);
+    font-weight: 500;
+    letter-spacing: 8px;
+    color: var(--Grey-Color);
+    margin-right: 800px;
+}
+
+.s_l_content .s_l_colomn .s_l_row span {
+    margin: 0px 50px;
+    font-size: 32px;
+    line-height: 70px;
+    color: var(--Platinum-Color);
+}
+
+#testimonial {
+    height: 100vh;
+    padding: 0 5vw;
+}
+
+.tes_content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.testimonials {
+    width: 70%;
+}
+
+.tes_btn {
+    width: 0%;
+}
+
+.tes {
+    margin: 40px;
+}
+
+.tes h2 {
+    font-size: 28px;
+    font-weight: 600;
+    font-family: var(--Headings-font);
+    letter-spacing: 5px;
+}
+
+.tes p {
+    font-size: 18px;
+    font-family: var(--body);
+    letter-spacing: 1px;
+    line-height: 30px;
+    color: var(--Grey-Color);
+    margin: 10px 0;
+}
+
+.tes h3 {
+    font-size: 18px;
+    font-family: var(--sub-headings);
+    letter-spacing: 1px;
+    line-height: 30px;
+    font-weight: 500;
+}
+
+#whyiam {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#whyiam span {
+    font-size: 80px;
+    line-height: 130px;
+    font-weight: 600;
+    font-family: var(--Headings-font);
+}
+
+#whyiam .yellow {
+    color: var(--tertiary-color);
+}
+
+#whyiam2 {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 12vw;
+}
+
+#whyiam2 p {
+    font-size: 35px;
+    line-height: 65px;
+    letter-spacing: 2px;
+    font-weight: 500;
+    font-family: var(--sub-headings);
+    text-align: center;
+    color: var(--Secondary-Color);
+}
+
+#cta {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 18vw;
+}
+
+#cta h5 {
+    font-size: 40px;
+    text-align: center;
+    line-height: 60px;
+    font-weight: 600;
+    font-family: var(--Headings-font);
+    letter-spacing: 3px;
+}
+
+#cta h5 span {
+    color: var(--tertiary-color);
+}
+
+#cta .cta_buttons {
+    margin: 20px 0px;
+}
+
+#cta .cta_buttons .now {
+    margin: 0px 20px;
+    font-family: var(--Sub-Headings-font);
+    font-size: 18px;
+    color: var(--Secondary-Color);
+    background: var(--Primary-Color);
+    padding: 6px 18px;
+    border-radius: 5%;
+    border: 1px solid var(--Platinum-Color);
+    transition: all .6s ease;
+    font-weight: 500;
+}
+
+#cta .cta_buttons .now:hover {
+    color: var(--Primary-Color);
+    box-shadow: inset 150px 0px 0px 0px var(--tertiary-Light-color);
+}
+
+#cta .cta_buttons .free {
+    margin: 0px 20px;
+    font-family: var(--Sub-Headings-font);
+    font-size: 20px;
+    color: var(--tertiary-color);
+    font-weight: 500;
+    padding-bottom: 2px;
+    border-bottom: 2px solid var(--tertiary-color);
+    transition: .2s all ease-in;
+}
+
+#cta .cta_buttons .free:hover {
+    color: var(--Primary-Color);
+    border-bottom: 2px solid var(--Primary-Color);
+}
+
+#faq {
+    height: 100vh;
+    padding: 0 6vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#faq .question {
+    margin: 20px 0;
+    transition: .4s all ease;
+}
+
+#faq .question span {
+    font-size: 27px;
+    font-family: var(--sub-headings);
+    color: var(--Secondary-Color);
+    letter-spacing: 2px;
+    transition: .4s all ease;
+    cursor: pointer;
+    border-bottom: 2px solid var(--tertiary-color);
+    padding: 3px;
+}
+
+#faq .answer span {
+    font-size: 27px;
+    font-family: var(--sub-headings);
+    color: var(--Platinum-Color);
+    letter-spacing: 1px;
+}
+
+#contact {
+    height: 40vh;
+    background: var(--Primary-Color);
+    display: flex;
+    padding: 0 8vw;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#contact span {
+    font-size: 42px;
+    color: var(--Secondary-Color);
+    line-height: 60px;
+    font-family: var(--Headings-font);
+    letter-spacing: 4px;
+}
+
+#contact a {
+    font-size: 40px;
+    color: var(--Secondary-Color);
+    line-height: 60px;
+    font-family: var(--Headings-font);
+    letter-spacing: 2px;
+    padding: 2px 0;
+    width: 20vw;
+    border-bottom: 2px solid var(--Secondary-Color);
+    transition: all .3s ease-in-out;
+}
+
+#contact a:hover {
+    color: var(--tertiary-Light-color);
+    border-bottom: 2px solid var(--tertiary-color);
+}
+.my_pic_left{
+    text-align: center;
+}
+
+.pic_innovate{
+    font-size: 30px;
+    line-height: 31px;
+}
+.pic_p {
+    width: 100%;
+    font-size: 20px;
+    line-height: 49px;
+    font-weight: 500;
+    margin-top: 40px;
+    padding: 0 4rem;
+}
+#mypic {
+    height: 295vh;
+    padding: 5rem 5rem;
+}ypic .my_pic_content{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+}
+#mypic .my_pic_content .littel_about{
+    display: flex;
+    width: 30%;
+    justify-content: left;
+    flex-direction: column;
+}
+
+.my_pic{
+    display: flex;
+    border-radius: 5px;
+    background-image: url(/Assests/IMG/my\ pic.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 80%;
+    height: 1500px;
+    margin-left: 5rem;
+}
+.littel_about p{
+    font-family: var(--Headings-font);
+    letter-spacing: 1px;
+    font-size: 15px;
+    line-height: 32px;
+    font-weight: 600;
+    color: var(--Grey-Color);
+}
+.littel_about span{
+    font-family: var(--Headings-font);
+    letter-spacing: 1px;
+    font-size: 14px;
+    line-height: 32px;
+    font-weight: 600;
+    color: var(--Platinum-Color);
+}
+#about_me_pic_hook{
+    padding: 10rem 0;
+}
+.about_hook_spans .Elegant {
+    font-size: 102px;
+    line-height: 70px;
+    color: var(--Platinum-Color);
+    margin-left: 7VW;
+    font-weight: 600;
+}
+.about_hook_spans .Fusing {
+    font-size: 102px;
+    line-height: 118px;
+    color: var(--tertiary-color);
+    margin-left: 11VW;
+    font-weight: 600;
+}
+.about_hook_spans .individuality {
+    font-size: 80px;
+    line-height: 55px;
+    color: var(--Platinum-Color);
+    margin-left: 25VW;
+}
+.about_hook_spans .with {
+    font-size: 67px;
+    line-height: 75px;
+    color: var(--tertiary-color);
+    margin-left: 8VW;
+    font-weight: 500;
+    margin-top: -60px;
+}
+.about_hook_spans .collective {
+    font-size: 70px;
+    line-height: 50px;
+
+    color: var(--Platinum-Color);
+    margin-left: 12VW;
+}
+
+.about_hook_spans .brilliance {
+    font-size: 110px;
+    line-height: 151px;
+    color: var(--tertiary-color);
+    margin-left: 20VW;
+    font-weight: 600;
+}
+.about_hook_spans .hook_p {
+    font-size: 20px;
+    line-height: 37px;
+    margin: 20px 0;
+    color: var(--tertiary-color);
+    margin-left: 40VW;
+    font-weight: 500;
+    font-family: var(--body);
+    width: 40%;
+    text-align: center;
+}
+
+.span_hed .dic_Strategist {
+    color: var(--tertiary-color);
+    font-family: var(--Headings-font);
+    letter-spacing: 4px;
+    font-size: 32px;
+    line-height: 80px;
+    font-weight: 600;
+    margin-top: 30px;
+}
+.my_pic_left {
+    text-align: center;
+}
+
+.span_hed  .dic_innovate {
+    color: var(--Secondary-Color);
+    font-family: var(--sub-headings-font);
+    letter-spacing: 2px;
+    font-size: 22px;
+    line-height: 35px;
+    font-weight: 500;
+    width: 90%;
+}
+
+.span_hed  .dog_innovate {
+    color: var(--tertiary-color);
+    font-family: var(--body);
+    letter-spacing: 2px;
+    font-size: 22px;
+    line-height: 32px;
+    font-weight: 500;
+    width: 90%;
+    margin: 20px 0;
+}
+.dic_pic {
+    width: 90%;
+    color: var(--Secondary-Color);
+    font-family: var(--body);
+    letter-spacing: 1px;
+    font-size: 18px;
+    line-height: 41px;
+    font-weight: 500;
+    margin-top: 18px;
+}
+.about_btn_pic {
+    height: 15vh;
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+.about_btn span{
+    text-align: center;
+    color: var(--tertiary-color);
+    font-family: var(--Headings-font);
+    letter-spacing: 3px;
+    font-size: 18px;
+    font-weight: 500;
+}
+.testiment_hero{
+    height: 50vh!important;
+    text-align: center!important;
+}
+
+#hero .testiment h1 {
+    font-family: var(--Headings-font);
+    color: var(--Primary-Color);
+    font-size: 36px;
+    font-weight: normal;
+    letter-spacing: 2px;
+}
+#hero .testiment h2 {
+    font-family: var(--sub-headings-font);
+    color: var(--tertiary-color);
+    font-size: 34px;
+    font-weight: normal;
+    letter-spacing: 5px;
+}
+
+.work_site_content {
+width: 100%;
+display: flex;
+justify-content: center;
+padding: 5rem 3rem;
+}
+.work_site_content .work_video{
+width: 60%;
+padding: 0rem 6rem;
+}
+.work_site_content .work_site_text{
+    width: 40%;
+    padding: 0rem 6rem;
+    display: flex;
+    flex-direction: column;
+   justify-content: center;
+   align-items: center;
+    text-align: center;
+}
+.work_site_content .work_site_text h2{
+    font-family: var(--sub-headings);
+    color: var(--Primary-Color);
+    font-size: 26px;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+.work_site_content .work_site_text span{
+    font-family: var(--Headings-font);
+    color: var(--tertiary-color);
+    font-size: 24px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    line-height: 50px;
+}
+
+
+.video_boader  video{
+    width: 100%;
+    height: 100%;
+    border-radius: 1px;
+    
+}
+
+#mypic .my_pic_content {
+    display: flex;
+}
+@media (min-width: 1920px) {
+    #greeting {
+        font-size: 3rem;
+    }
+
+    #menu .links a {
+        letter-spacing: 13px;
+        font-size: 140px;
+        margin: 7px 0;
+    }
+
+    nav {
+        height: 100px;
+    }
+
+    nav .button a {
+        font-size: 21px;
+        padding: 9px 20px;
+        border: 1px solid var(--Platinum-Color);
+        margin: 0px 72px;
+    }
+
+    nav .button a:hover {
+        box-shadow: inset 150px 0px 0px 0px var(--tertiary-Light-color);
+    }
+
+    nav .name_logo h1 {
+        font-size: 48px;
+        letter-spacing: 12px;
+    }
+
+    nav .hamburger .line {
+        width: 50px;
+        height: 2px;
+        margin: 11px 0;
+    }
+
+    #hero .hero_content h1 {
+        font-size: 60px;
+        letter-spacing: 4px;
+    }
+
+    #hero .hero_content h2 {
+        font-size: 46px;
+        letter-spacing: 1px;
+    }
+
+    #Social_icons .icons a i {
+        font-size: 35px;
+        margin: 0 13px;
+    }
+
+    #communication_icons .icons a i {
+        font-size: 35px;
+        margin: 10px 0px;
+    }
+
+    .a_heading .about_span {
+        margin-left: 115px;
+    }
+
+    .a_heading span {
+        font-size: 350px;
+        line-height: 400px;
+        font-family: var(--Headings-font);
+        font-weight: 900;
+        letter-spacing: 30px;
+        color: transparent;
+        -webkit-text-stroke: 3px var(--Secondary-Color);
+    }
+
+    .side_spans span {
+        font-size: 28px;
+    }
+
+    .about_hook_spans .Crafting {
+        font-size: 160px;
+        line-height: 120px;
+        margin-left: 5VW;
+    }
+
+    .about_hook_spans .Premium {
+        font-size: 180px;
+        line-height: 200px;
+        margin-left: 24VW;
+    }
+
+    .about_hook_spans .digital {
+        font-size: 90px;
+        line-height: 140px;
+        margin-left: 12VW;
+    }
+
+    .about_hook_spans .inspired {
+        font-size: 90px;
+        line-height: 110px;
+        margin-left: 20VW;
+    }
+
+    .about_hook_spans .nature {
+        font-size: 140px;
+        line-height: 230px;
+        margin-left: 35VW;
+    }
+
+    #about_me_content .hed {
+        letter-spacing: 4px;
+        font-size: 65px;
+        margin-top: 35px;
+    }
+
+    #about_me_content .Strategist {
+        letter-spacing: 4px;
+        font-size: 37px;
+        line-height: 58px;
+    }
+
+    #about_me_content .innovate {
+        letter-spacing: 2px;
+        font-size: 35px;
+        line-height: 60px;
+    }
+
+    .about_p {
+        letter-spacing: 1px;
+        font-size: 25px;
+        line-height: 52px;
+        margin-top: 25px;
+    }
+
+    .about_btn a span {
+        font-size: 35px;
+    }
+
+    #skill_heading span {
+        font-size: 210px;
+        line-height: 300px;
+        letter-spacing: 25px;
+        -webkit-text-stroke: 3px var(--Secondary-Color);
+    }
+
+    #skill_heading .Mastery {
+        font-size: 235px;
+    }
+
+    .s_l_heading {
+        font-size: 45px;
+        font-weight: 600;
+        letter-spacing: 12px;
+        margin: 38px 0px;
+        margin-right: 840px;
+    }
+
+    .s_l_content .s_l_colomn .s_l_row span {
+        margin: 0px 75px;
+        font-size: 41px;
+        line-height: 86px;
+    }
+
+    .s_p_heading {
+        font-size: 45px;
+        letter-spacing: 12px;
+        margin: 45px 0px;
+        margin-right: 1072px;
+    }
+
+    .s_l_content .s_l_colomn .soft {
+        font-size: 36px;
+        line-height: 40px;
+        letter-spacing: 8px;
+        margin-right: 1360px;
+    }
+
+    .tes {
+        margin: 60px;
+    }
+
+    .tes h2 {
+        font-size: 33px;
+        letter-spacing: 5px;
+    }
+
+    .tes p {
+        font-size: 24px;
+        letter-spacing: 1px;
+        line-height: 39px;
+        margin: 20px 0;
+    }
+
+    .tes h3 {
+        font-size: 25px;
+        letter-spacing: 1.5px;
+        line-height: 30px;
+    }
+
+    #whyiam span {
+        font-size: 100px;
+        line-height: 155px;
+    }
+
+    #whyiam2 p {
+        font-size: 42px;
+        line-height: 105px;
+        letter-spacing: 2px;
+    }
+
+    #cta h5 {
+        font-size: 45px;
+        line-height: 75px;
+        letter-spacing: 3px;
+    }
+
+    #cta .cta_buttons .now {
+        font-size: 22px;
+        padding: 10px 20px;
+        border: 1px solid var(--Platinum-Color);
+        margin: 0px 55px;
+    }
+
+    #cta .cta_buttons .now:hover {
+        box-shadow: inset 170px 0px 0px 0px var(--tertiary-Light-color);
+    }
+
+    #cta .cta_buttons .free {
+        font-size: 28px;
+        padding-bottom: 3px;
+        border-bottom: 2px solid var(--tertiary-color);
+    }
+
+    #faq .question span {
+        font-size: 32px;
+        letter-spacing: 2px;
+        border-bottom: 2px solid var(--tertiary-color);
+        padding: 9px;
+    }
+
+    #faq .question {
+        margin: 33px 0;
+    }
+
+    #faq .answer span {
+        font-size: 30px;
+        letter-spacing: 2px;
+    }
+
+    #contact span {
+        font-size: 45px;
+        line-height: 50px;
+        letter-spacing: 5px;
+    }
+
+    #contact a {
+        font-size: 40px;
+        line-height: 85px;
+        letter-spacing: 3px;
+        padding: 0px 0;
+        width: 15vw;
+        border-bottom: 2px solid var(--Secondary-Color);
+    }
+
+    #contact {
+        height: 40vh;
+        padding: 0 6vw;
+    }
+
+    .littel_about p {
+        font-size: 21px;
+        line-height: 37px;
+    }
+
+    .littel_about span {
+        font-size: 20px;
+        line-height: 53px;
+    }
+    #mypic {
+        height: 220vh;
+        padding: 6rem 8rem
+    }
+
+    .pic_p {
+        letter-spacing: 1px;
+        font-size: 28px;
+        line-height: 60px;
+        margin-top: 50px;
+    }
+
+    .about_hook_spans .Elegant {
+        font-size: 120px;
+        line-height: 130px;
+    }
+
+    .about_hook_spans .Fusing {
+        font-size: 105px;
+        line-height: 118px;
+        color: var(--tertiary-color);
+        margin-left: 11VW;
+        font-weight: 600;
+    }
+
+    .about_hook_spans .individuality {
+        font-size: 86px;
+        line-height: 85px;
+    }
+
+    .about_hook_spans .hook_p {
+        font-size: 26px;
+        line-height: 44px;
+        margin: 22px 0;
+        margin-left: 52VW;
+    }
+
+    .about_hook_spans .with {
+        font-size: 80px;
+        line-height: 85px;
+        margin-left: 8VW;
+        margin-top: -120px;
+    }
+
+    .about_hook_spans .collective {
+        font-size: 90px;
+        line-height: 155px;
+    }
+
+    .about_hook_spans .brilliance {
+        font-size: 130px;
+        line-height: 162px;
+    }
+
+    .span_hed  .dic_Strategist {
+        letter-spacing: 4px;
+        font-size: 42px;
+        line-height: 95px;
+        margin-top: 50px;
+    }
+    .span_hed  .dic_innovate{
+        letter-spacing: 2px;
+        font-size: 32px;
+        line-height: 48px;
+        width: 90%;
+    }
+    .span_hed  .dog_innovate{
+        letter-spacing: 2px;
+        font-size: 28px;
+        line-height: 40px;
+        width: 90%;
+        margin-top: 40px;
+    }
+
+    .dic_pic  {
+        letter-spacing: 1px;
+        font-size: 25px;
+        line-height: 58px;
+        margin-top: 41px;
+        width: 90%;
+    }
+
+    .about_btn span {
+        font-size: 23px;
+    }
+    .work_site_content .work_site_text h2 {
+        font-size: 35px;
+    }
+    .work_site_content .work_site_text span {
+        font-size: 30px;
+        line-height: 60px;
+    }
+}
+
+
+
+
+
+
+@media (min-width: 2560px) {
+    
+    #greeting {
+        font-size: 4rem;
+    }
+
+    #menu .links a {
+        letter-spacing: 15px;
+        font-size: 210px;
+        margin: 10px 0;
+    }
+
+    nav {
+        height: 120px;
+    }
+
+    nav .button a {
+        font-size: 30px;
+        padding: 12px 35px;
+        border: 2px solid var(--Platinum-Color);
+        margin: 0px 90px;
+    }
+
+    nav .button a:hover {
+        box-shadow: inset 250px 0px 0px 0px var(--tertiary-Light-color);
+    }
+
+    nav .name_logo h1 {
+        font-size: 60px;
+        letter-spacing: 13px;
+    }
+
+    nav .hamburger .line {
+        width: 68px;
+        height: 4px;
+        margin: 9px 0;
+    }
+
+    #hero .hero_content h1 {
+        font-size: 80px;
+        letter-spacing: 5px;
+    }
+
+    #hero .hero_content h2 {
+        font-size: 60px;
+        letter-spacing: 1px;
+    }
+
+    #Social_icons .icons a i {
+        font-size: 45px;
+        margin: 0 20px;
+    }
+
+    #communication_icons .icons a i {
+        font-size: 45px;
+        margin: 15px 0px;
+    }
+
+    .a_heading .about_span {
+        margin-left: 225px;
+    }
+
+    .a_heading span {
+        font-size: 500px;
+        line-height: 620px;
+        font-family: var(--Headings-font);
+        font-weight: 900;
+        letter-spacing: 40px;
+        color: transparent;
+        -webkit-text-stroke: 4px var(--Secondary-Color);
+    }
+
+    .side_spans span {
+        font-size: 35px;
+    }
+
+    .about_hook_spans .Crafting {
+        font-size: 200px;
+        line-height: 150px;
+        margin-left: 8VW;
+    }
+
+    .about_hook_spans .Premium {
+        font-size: 250px;
+        line-height: 240px;
+        margin-left: 32VW;
+    }
+
+    .about_hook_spans .digital {
+        font-size: 150px;
+        line-height: 280px;
+        margin-left: 22VW;
+    }
+
+    .about_hook_spans .inspired {
+        font-size: 150px;
+        line-height: 200px;
+        margin-left: 8VW;
+    }
+
+    .about_hook_spans .nature {
+        font-size: 160px;
+        line-height: 280px;
+        margin-left: 32VW;
+    }
+
+    #about_me_content .hed {
+        letter-spacing: 5px;
+        font-size: 100px;
+        margin-top: 50px;
+    }
+
+    #about_me_content .Strategist {
+        letter-spacing: 5px;
+        font-size: 50px;
+        line-height: 100px;
+    }
+
+    #about_me_content .innovate {
+        letter-spacing: 3px;
+        font-size: 45px;
+        line-height: 45px;
+    }
+
+    .about_p {
+        letter-spacing: 1.5px;
+        font-size: 32px;
+        line-height: 65px;
+        margin-top: 45px;
+    }
+
+    .about_btn a span {
+        font-size: 55px;
+    }
+
+    #skill_heading span {
+        font-size: 350px;
+        line-height: 400px;
+        letter-spacing: 25px;
+        -webkit-text-stroke: 4px var(--Secondary-Color);
+    }
+
+    #skill_heading .Mastery {
+        font-size: 320px;
+    }
+
+    .s_l_heading {
+        font-size: 80px;
+        font-weight: 600;
+        letter-spacing: 15px;
+        margin: 80px 0px;
+        margin-right: 1000px;
+    }
+
+    .s_l_content .s_l_colomn .s_l_row span {
+        margin: 0px 100px;
+        font-size: 59px;
+        line-height: 115px;
+    }
+
+    .s_p_heading {
+        font-size: 80px;
+        letter-spacing: 15px;
+        margin: 80px 0px;
+        margin-right: 1000px;
+    }
+
+    .s_l_content .s_l_colomn .soft {
+        font-size: 55px;
+        line-height: 80px;
+        letter-spacing: 10px;
+        margin-right: 1500px;
+    }
+
+    .tes {
+        margin: 60px;
+    }
+
+    .tes h2 {
+        font-size: 28px;
+        font-weight: 600;
+        font-family: var(--Headings-font);
+        letter-spacing: 5px;
+    }
+
+    .tes h2 {
+        font-size: 50px;
+        letter-spacing: 6px;
+    }
+
+    .tes p {
+        font-size: 32px;
+        letter-spacing: 1.2px;
+        line-height: 50px;
+        margin: 28px 0;
+    }
+
+    .tes h3 {
+        font-size: 35px;
+        letter-spacing: 2px;
+        line-height: 50px;
+    }
+
+    #whyiam span {
+        font-size: 145px;
+        line-height: 210px;
+    }
+
+    #whyiam2 p {
+        font-size: 60px;
+        line-height: 150px;
+        letter-spacing: 2.2px;
+    }
+
+    #cta h5 {
+        font-size: 80px;
+        line-height: 110px;
+        letter-spacing: 4px;
+    }
+
+    #cta .cta_buttons .now {
+        font-size: 30px;
+        padding: 12px 35px;
+        border: 2px solid var(--Platinum-Color);
+        margin: 0px 90px;
+    }
+
+    #cta .cta_buttons .now:hover {
+        box-shadow: inset 250px 0px 0px 0px var(--tertiary-Light-color);
+    }
+
+    #cta .cta_buttons .free {
+        font-size: 40px;
+        padding-bottom: 4px;
+        border-bottom: 3px solid var(--tertiary-color);
+    }
+
+    #faq .question span {
+        font-size: 50px;
+        letter-spacing: 3px;
+        border-bottom: 3px solid var(--tertiary-color);
+        padding: 10px;
+    }
+
+    #faq .question {
+        margin: 40px 0;
+    }
+
+    #contact span {
+        font-size: 60px;
+        line-height: 70px;
+        letter-spacing: 6px;
+    }
+
+    #contact a {
+        font-size: 60px;
+        line-height: 95px;
+        letter-spacing: 3px;
+        padding: 4px 0;
+        width: 17vw;
+        border-bottom: 3px solid var(--Secondary-Color);
+    }
+
+    #contact {
+        height: 40vh;
+        padding: 0 6vw;
+    }
+
+    #faq .answer span {
+        font-size: 50px;
+        letter-spacing: 2px;
+    }
+    #mypic {
+        height: 170vh;
+        padding: 10rem 10rem;
+    }
+    .littel_about p {
+        letter-spacing: 3px;
+        font-size: 24px;
+        line-height: 54px;
+    }
+
+    .littel_about span {
+        letter-spacing: 2px;
+        font-size: 25px;
+        line-height: 64px;
+    }
+
+    .pic_p{
+        letter-spacing: 1.5px;
+        font-size: 36px;
+        line-height: 85px;
+        margin-top: 78px;
+    }
+    .about_hook_spans .Elegant {
+        font-size: 170px;
+        line-height: 175px;
+        margin-left: 7VW;
+        font-weight: 600;
+    }
+    .about_hook_spans .Fusing {
+        font-size: 140px;
+        line-height: 140px;
+        margin-left: 11VW;
+        font-weight: 600;
+    }
+    .about_hook_spans .individuality {
+        font-size: 100px;
+        line-height: 100px;
+        margin-left: 25VW;
+    }
+    .about_hook_spans .hook_p {
+        font-size: 32px;
+        line-height: 60px;
+        margin: 20px 0;
+        margin-left: 48VW;
+        width: 38%;
+    }
+    .about_hook_spans .with {
+        font-size: 100px;
+        line-height: 109px;
+        margin-left: 8VW;
+        margin-top: -125px;
+    }
+    .about_hook_spans .collective {
+        font-size: 100px;
+        line-height: 125px;
+        margin-left: 12VW;
+    }
+    .about_hook_spans .brilliance {
+        font-size: 150px;
+        line-height: 196px;
+        color: var(--tertiary-color);
+        margin-left: 20VW;
+        font-weight: 600;
+    }
+    .span_hed  .dic_Strategist {
+        letter-spacing: 6px;
+        font-size: 48px;
+        line-height: 170px;
+        width: 92%;
+        margin-top: 20px;
+    }
+    .span_hed  .dic_innovate  {
+        letter-spacing: 4px;
+        font-size: 40px;
+        line-height: 62px;
+        width: 92%;
+    }
+    .span_hed  .dog_innovate {
+        letter-spacing: 5px;
+        font-size: 42px;
+        line-height: 64px;
+        width: 92%;
+        margin-top: 55px;
+    }
+    .dic_pic {
+        letter-spacing: 2.5px;
+        font-size: 34px;
+        line-height: 70px;
+        margin-top: 45px;
+        width: 92%;
+    }
+
+    .about_btn span {
+        font-size: 30px;
+    }
+
+    .work_site_content .work_site_text h2 {
+        font-size: 50px;
+        letter-spacing: 2px;
+    }
+    .work_site_content .work_site_text span {
+        font-size: 42px;
+        letter-spacing: 2px;
+        line-height: 75px;
+    }
+}
+
+
+
+@media (max-width: 1200px) {
+    #greeting {
+        font-size: 2rem;
+    }
+
+    #menu .links a {
+        letter-spacing: 10px;
+        font-size: 100px;
+        margin: 5px 0;
+    }
+
+    nav {
+        height: 68px;
+    }
+
+    nav .button a {
+        font-size: 16px;
+        padding: 7px 14px;
+        border: 1px solid var(--Platinum-Color);
+        margin: 0px 40px;
+    }
+
+    nav .button a:hover {
+        box-shadow: inset 120px 0px 0px 0px var(--tertiary-Light-color);
+    }
+
+    nav .name_logo h1 {
+        font-size: 32px;
+        letter-spacing: 11px;
+    }
+
+    nav .hamburger .line {
+        width: 38px;
+        height: 2px;
+        margin: 10px 0;
+    }
+
+    #hero .hero_content h1 {
+        font-size: 40px;
+        letter-spacing: 2px;
+    }
+
+    #hero .hero_content h2 {
+        font-size: 29px;
+        letter-spacing: 1px;
+    }
+
+    #Social_icons .icons a i {
+        font-size: 23px;
+        margin: 0 7px;
+    }
+
+    #communication_icons .icons a i {
+        font-size: 23px;
+        margin: 7px 0px;
+    }
+
+    .a_heading .about_span {
+        margin-left: 60px;
+    }
+
+    .a_heading span {
+        font-size: 225px;
+        line-height: 270px;
+        letter-spacing: 15px;
+    }
+
+    .side_spans span {
+        width: 173vw;
+        font-size: 20px;
+    }
+
+    #about_me_content .hed {
+        letter-spacing: 2px;
+        font-size: 36px;
+        margin-top: 40px;
+    }
+
+    #about_me_content .Strategist {
+        letter-spacing: 2px;
+        font-size: 23px;
+        line-height: 60px;
+    }
+
+    #about_me_content .innovate {
+        letter-spacing: 1px;
+        font-size: 22px;
+        line-height: 15px;
+    }
+
+    .about_p {
+        font-size: 16px;
+        line-height: 28px;
+        margin-top: 35px;
+    }
+
+    #skill_heading span {
+        font-size: 135px;
+        line-height: 164px;
+        letter-spacing: 18px;
+    }
+
+    #skill_heading .Mastery {
+        font-size: 141px;
+    }
+
+    .s_p_heading {
+        font-size: 45px;
+        margin: 25px 0px;
+        margin-right: 521px;
+        margin-top: 50px;
+    }
+
+    .tes h2 {
+        font-size: 24px;
+        font-weight: 600;
+        font-family: var(--Headings-font);
+        letter-spacing: 4px;
+    }
+
+    #whyiam span {
+        font-size: 65px;
+        line-height: 100px;
+    }
+
+    #whyiam2 p {
+        font-size: 27px;
+        line-height: 71px;
+    }
+
+    .tes p {
+        font-size: 15px;
+        line-height: 28px;
+        margin: 8px 0;
+    }
+
+    .tes h3 {
+        font-size: 16px;
+        font-family: var(--sub-headings);
+        letter-spacing: 1px;
+        line-height: 23px;
+        font-weight: 600;
+    }
+
+    #cta h5 {
+        font-size: 34px;
+        line-height: 50px;
+        letter-spacing: 2px;
+    }
+
+    #cta .cta_buttons .now {
+        margin: 0px 18px;
+        font-size: 16px;
+        padding: 4px 14px;
+    }
+
+    #cta .cta_buttons .free {
+        margin: 0px 20px;
+        font-size: 18px;
+    }
+
+    #contact span {
+        font-size: 34px;
+        letter-spacing: 4px;
+    }
+
+    #contact a {
+        font-size: 33px;
+        line-height: 42px;
+    }
+    #mypic .my_pic_content  {
+display: flex;    }
+    #mypic .my_pic_content .littel_about {
+        width: 25%;
+    }
+    .my_pic {
+        width: 75%;
+        height: 1300px;
+        margin-left: 3rem;
+    }
+
+    #mypic {
+        height: 315vh;
+        padding: 5rem 5rem;
+    }
+    .littel_about p {
+        letter-spacing: 0px;
+        font-size: 13px;
+        line-height: 23px;
+        font-weight: 500;
+    }
+    .littel_about span {
+        font-size: 12px;
+        line-height: 27px;
+    }
+    .pic_p {
+        font-size: 19px;
+        line-height: 35px;
+        margin-top: 35px;
+    }
+
+    .about_hook_spans .Elegant {
+        font-size: 74px;
+        line-height: 50px;
+    }
+
+    .about_hook_spans .Fusing {
+        font-size: 80px;
+        line-height: 106px;
+    }
+
+    .about_hook_spans .individuality {
+        font-size: 65px;
+        line-height: 26px;
+    }
+    
+    .about_hook_spans .hook_p {
+        font-size: 16px;
+        line-height: 28px;
+        margin: 42px 0;
+        margin-left: 57VW;
+        width: 34%;
+    }
+
+    .about_hook_spans .with {
+        font-size: 59px;
+        line-height: 40px;
+        margin-top: -123px;
+    }
+
+    .about_hook_spans .collective {
+        font-size: 75px;
+        line-height: 115px;
+    }
+    
+    .about_hook_spans .brilliance {
+        font-size: 95px;
+        line-height: 109px;
+        margin-left: 20VW;
+    }
+    .about_btn span {
+        letter-spacing: 2px;
+        font-size: 14px;
+    }
+    .span_hed  .dic_Strategist {
+        letter-spacing: 3px;
+        font-size: 25px;
+        line-height: 70px;
+        margin-top: 30px;
+    }
+    .span_hed  .dic_innovate {
+        letter-spacing: 1px;
+        font-size: 20px;
+        line-height: 30px;
+        width: 90%;
+    }
+    .span_hed  .dog_innovate {
+        letter-spacing: 1px;
+        font-size: 20px;
+        line-height: 28px;
+        width: 90%;
+    }
+    .dic_pic {
+        width: 90%;
+        font-size: 16px;
+        line-height: 32px;
+        margin-top: 28px;
+    }
+    .work_site_content {
+        padding: 5rem 1rem;
+    }
+
+    .work_site_content .work_site_text h2 {
+        font-size: 24px;
+        letter-spacing: 0px;
+    }
+
+    .work_site_content .work_site_text span {
+        font-size: 22px;
+        letter-spacing: 0px;
+        line-height: 50px;
+    }
+
+    
+}
+
+@media (max-width: 1024px) {
+    #menu .links a {
+        letter-spacing: 10px;
+        font-size: 100px;
+        margin: 5px 0;
+    }
+
+    nav {
+        height: 68px;
+    }
+
+    nav .button a {
+        font-size: 14px;
+        padding: 5px 13px;
+        margin: 0px 31px;
+    }
+
+    nav .button a:hover {
+        box-shadow: inset 120px 0px 0px 0px var(--tertiary-Light-color);
+    }
+
+    nav .name_logo h1 {
+        font-size: 29px;
+        letter-spacing: 10px;
+    }
+
+    nav .hamburger .line {
+        width: 36px;
+        height: 2px;
+        margin: 10px 0;
+    }
+
+    .a_heading .about_span {
+        margin-left: 50px;
+    }
+
+    .a_heading .me_span {
+        margin-right: 149px;
+    }
+
+    .a_heading span {
+        font-size: 210px;
+        line-height: 280px;
+        letter-spacing: 16px;
+    }
+
+    .side_spans span {
+        width: 173vw;
+        font-size: 20px;
+    }
+
+    #about_me_content .hed {
+        letter-spacing: 2px;
+        font-size: 36px;
+        margin-top: 40px;
+    }
+
+    .about_hook_spans .Crafting {
+        font-size: 95px;
+        line-height: 70px;
+        margin-left: 5VW;
+    }
+
+    .about_hook_spans .Premium {
+        font-size: 110px;
+        line-height: 160px;
+        margin-left: 22VW;
+        font-weight: 600;
+    }
+
+    .about_hook_spans .digital {
+        font-size: 55px;
+        line-height: 50px;
+        color: var(--Platinum-Color);
+        margin-left: 12VW;
+    }
+
+    .about_hook_spans .inspired {
+        font-size: 60px;
+        line-height: 110px;
+        margin-left: 19VW;
+    }
+
+    #about_me_content .Strategist {
+        letter-spacing: 2px;
+        font-size: 23px;
+        line-height: 60px;
+    }
+
+    #about_me_content .innovate {
+        letter-spacing: 1px;
+        font-size: 22px;
+        line-height: 15px;
+    }
+
+    .about_p {
+        width: 61%;
+        font-size: 17px;
+        line-height: 30px;
+    }
+
+    #skill_heading span {
+        font-size: 112px;
+        line-height: 164px;
+        letter-spacing: 16px;
+    }
+
+    #skill_heading .Mastery {
+        font-size: 120px;
+    }
+
+    .s_l_heading {
+        font-size: 32px;
+        font-weight: 600;
+        letter-spacing: 8px;
+        margin: 30px 0px;
+        margin-right: 304px;
+    }
+
+    .s_l_content .s_l_colomn .s_l_row span {
+        margin: 0px 50px;
+        font-size: 28px;
+        line-height: 58px;
+    }
+
+    .s_p_heading {
+        font-size: 32px;
+        letter-spacing: 10px;
+        margin: 49px 0px;
+        margin-right: 440px;
+    }
+
+    .s_l_content .s_l_colomn .soft {
+        font-size: 31px;
+        line-height: 98px;
+        font-weight: 500;
+        letter-spacing: 7px;
+        margin-right: 683px;
+    }
+
+    .tes h2 {
+        font-size: 24px;
+        font-weight: 600;
+        font-family: var(--Headings-font);
+        letter-spacing: 4px;
+    }
+
+    #whyiam span {
+        font-size: 65px;
+        line-height: 100px;
+    }
+
+    #whyiam2 p {
+        font-size: 24px;
+        line-height: 67px;
+    }
+
+    .tes p {
+        font-size: 15px;
+        line-height: 28px;
+        margin: 8px 0;
+    }
+
+    .tes h3 {
+        font-size: 16px;
+        font-family: var(--sub-headings);
+        letter-spacing: 1px;
+        line-height: 23px;
+        font-weight: 600;
+    }
+
+    #cta h5 {
+        font-size: 29px;
+        line-height: 44px;
+        letter-spacing: 2px;
+    }
+
+    #cta .cta_buttons .now {
+        margin: 0px 18px;
+        font-size: 16px;
+        padding: 4px 14px;
+    }
+
+    #cta .cta_buttons .free {
+        margin: 0px 20px;
+        font-size: 18px;
+    }
+
+    #faq .question span {
+        font-size: 22px;
+    }
+
+    #faq .answer span {
+        font-size: 20px;
+    }
+
+    #contact span {
+        font-size: 30px;
+        letter-spacing: 3px;
+    }
+
+    #contact a {
+        font-size: 28px;
+        line-height: 42px;
+    }
+    #mypic {
+        height: 315vh;
+        padding: 5rem 2rem;
+    }
+    .littel_about p {
+        font-size: 12px;
+        line-height: 20px;
+    }
+    .littel_about span {
+        font-size: 10px;
+        line-height: 22px;
+    }
+    .my_pic {
+        width: 85%;
+        height: 1300px;
+        margin-left: 2rem;
+    }
+    #mypic .my_pic_content .littel_about {
+        width: 25%;
+    }
+
+    .pic_p {
+        width: 100%;
+        font-size: 18px;
+        line-height: 38px;
+    }
+    .about_hook_spans .Elegant {
+        font-size: 68px;
+        line-height: 40px;
+    }
+    .about_hook_spans .Fusing {
+        font-size: 75px;
+        line-height: 110px;
+    }
+    .about_hook_spans .individuality {
+        font-size: 58px;
+        line-height: 23px;
+    }
+    .about_hook_spans .hook_p {
+        font-size: 15px;
+        line-height: 28px;
+        margin: 30px 0;
+        margin-left: 54VW;
+        width: 36%;
+    }
+    .about_hook_spans .collective {
+        font-size: 68px;
+        line-height: 130px;
+    }
+    .about_hook_spans .brilliance {
+        font-size: 85px;
+        line-height: 95px;
+        margin-left: 20VW;
+    }.a_content {
+        padding: 0 5.4vw;
+    }
+    #about_me_content .dic_innovate {
+        letter-spacing: 1px;
+        font-size: 19px;
+        line-height: 28px;
+        width: 90%;
+    }
+    .left .dic_pic {
+        width: 90%;
+        font-size: 14px;
+        line-height: 32px;
+        margin-top: 28px;
+    }
+    .left .dic_pic {
+        width: 90%;
+        font-size: 15px;
+        line-height: 30px;
+        margin-top: 18px;
+    }
+
+    .work_site_content .work_site_text h2 {
+        font-size: 21px;
+    }
+    .work_site_content .work_site_text span {
+        font-size: 19px;
+        line-height: 45px;
+    }
+}
+
+
+
+
+@media (max-width: 768px) {
+    nav .button a {
+        margin: 0px 22px;
+    }
+
+    nav .hamburger {
+        left: 92%;
+    }
+
+    #hero .hero_content h1 {
+        font-size: 34px;
+        letter-spacing: 1px;
+    }
+
+    #hero .hero_content h2 {
+        font-size: 23px;
+        letter-spacing: 1px;
+    }
+
+    #Social_icons .icons {
+        top: 96%;
+    }
+
+    #Social_icons .icons a i {
+        font-size: 21px;
+        margin: 0 6px;
+    }
+
+    #communication_icons .icons a i {
+        font-size: 21px;
+        margin: 5px 0px;
+    }
+
+    #communication_icons .icons {
+        top: 91%;
+        left: 96%;
+    }
+
+    .a_heading .about_span {
+        margin-left: 50px;
+    }
+
+    .a_heading .me_span {
+        margin-right: 74px;
+        font-size: 167px;
+        line-height: 270px;
+        letter-spacing: 12px;
+    }
+
+    .side_spans {
+        margin: 0 8px;
+    }
+
+    .a_heading span {
+        font-size: 167px;
+        line-height: 270px;
+        letter-spacing: 12px;
+    }
+
+    .side_spans span {
+        width: 173vw;
+        font-size: 20px;
+    }
+
+    .about_hook_spans .Crafting {
+        font-size: 80px;
+        line-height: 15px;
+        margin-left: 4VW;
+    }
+
+    .about_hook_spans .Premium {
+        font-size: 95px;
+        line-height: 145px;
+        margin-left: 18VW;
+    }
+
+    .about_hook_spans .digital {
+        font-size: 46px;
+        line-height: 70px;
+        margin-left: 6VW;
+    }
+
+    .about_hook_spans .nature {
+        font-size: 90px;
+        line-height: 180px;
+        margin-left: 25VW;
+    }
+
+    .about_btn a span {
+        font-size: 20px;
+    }
+
+    #about_me_content .hed {
+        letter-spacing: 1px;
+        font-size: 30px;
+        margin-top: 22px;
+    }
+
+    #about_me_content .Strategist {
+        letter-spacing: 1px;
+        font-size: 20px;
+        line-height: 58px;
+    }
+
+    #about_me_content .innovate {
+        letter-spacing: 1px;
+        font-size: 20px;
+        line-height: 10px;
+    }
+
+    .about_p {
+        width: 100%;
+        font-size: 16px;
+        line-height: 30px;
+    }
+
+    #skill_heading span {
+        font-size: 90px;
+        line-height: 161px;
+        letter-spacing: 12px;
+        -webkit-text-stroke: 1px var(--Secondary-Color);
+    }
+
+    #skill_heading .Mastery {
+        font-size: 105px;
+    }
+
+    .s_l_heading {
+        font-size: 25px;
+        font-weight: 600;
+        letter-spacing: 6px;
+        margin: 30px 0px;
+        margin-right: 271px;
+    }
+
+    .s_l_content .s_l_colomn .s_l_row span {
+        margin: 0px 37px;
+        font-size: 24px;
+        line-height: 55px;
+    }
+
+    .s_p_heading {
+        font-size: 25px;
+        letter-spacing: 6px;
+        margin: 0px 0px;
+        margin-right: 380px;
+    }
+
+    .s_l_content .s_l_colomn .soft {
+        font-size: 22px;
+        line-height: 71px;
+        font-weight: 500;
+        letter-spacing: 5px;
+        margin-right: 605px;
+    }
+
+    #testimonial {
+        width: 96%;
+        padding: 0 2vw;
+    }
+
+    .testimonials {
+        width: 85%;
+    }
+
+    .tes h2 {
+        font-size: 18px;
+        font-weight: 600;
+        font-family: var(--Headings-font);
+        letter-spacing: 3px;
+    }
+
+    .tes p {
+        font-size: 14px;
+        line-height: 23px;
+        margin: 3px 0;
+    }
+
+    .tes h3 {
+        font-size: 14px;
+        font-family: var(--sub-headings);
+        letter-spacing: 1px;
+        line-height: 15px;
+        font-weight: 600;
+    }
+    #whyiam {
+        height: 45vh;
+
+    }
+    #whyiam span {
+        font-size: 48px;
+        line-height: 82px;
+    }
+
+    #whyiam2 p {
+        font-size: 21px;
+        line-height: 56px;
+    }
+    #cta {
+        height: 70vh;
+    }
+    #cta h5 {
+        font-size: 23px;
+        line-height: 42px;
+        letter-spacing: 1px;
+    }
+
+    #cta .cta_buttons .now {
+        margin: 0px 10px;
+        font-size: 14px;
+        padding: 5px 12px;
+    }
+
+    #cta .cta_buttons .free {
+        margin: 0px 20px;
+        font-size: 16px;
+    }
+
+    #faq {
+        padding: 0 4vw;
+        text-align: center;
+    }
+
+
+    #contact span {
+        font-size: 28px;
+        letter-spacing: 3px;
+    }
+
+    #contact a {
+        font-size: 24px;
+        line-height: 35px;
+        width: 23vw;
+    }
+    #mypic {
+        height: 324vh;
+        padding: 2rem 3rem;
+    }
+    #mypic .my_pic_content {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    #mypic .my_pic_content .littel_about {
+        width: 50%;
+        padding: 1rem 0;    }
+
+        .littel_about p {
+            font-size: 13px;
+            line-height: 25px;
+        }
+        .littel_about span {
+            font-size: 13px;
+            line-height: 29px;
+        }
+        .my_pic {
+            width: 100%;
+            height: 1300px;
+            margin-left: 0rem;
+        }
+
+        .pic_p {
+            width: 100%;
+            font-size: 16px;
+            line-height: 30px;
+            padding: 0 2rem;
+        }
+        .about_hook_spans .Elegant {
+            font-size: 54px;
+            line-height: 25px;
+            margin-left: 5VW;
+        }
+        .about_hook_spans .Fusing {
+            font-size: 65px;
+            line-height: 92px;
+        }
+        .about_hook_spans .individuality {
+            font-size: 48px;
+            line-height: 21px;
+        }
+        .about_hook_spans .hook_p {
+            font-size: 13px;
+            line-height: 20px;
+            margin: 60px 0;
+            margin-left: 54VW;
+            width: 39%;
+        }
+        .about_hook_spans .with {
+            font-size: 50px;
+            line-height: 52px;
+            margin-top: -138px;
+        }
+        .about_hook_spans .collective {
+            font-size: 55px;
+            line-height: 98px;
+        }
+        .about_hook_spans .brilliance {
+            font-size: 70px;
+            line-height: 110px;
+            margin-left: 20VW;
+        }
+ 
+        .right{
+           display: none;
+        }
+
+        .a_content {
+            text-align: center;
+        }
+
+        .span_hed .dic_innovate {
+            letter-spacing: 1px;
+            font-size: 19px;
+            line-height: 28px;
+            width: 100%;
+        }
+        .span_hed .dog_innovate {
+            letter-spacing: 1px;
+            font-size: 17px;
+            line-height: 25px;
+            width: 90%;
+            margin: 9px 0;
+        }
+
+        .left .dic_pic {
+            width: 100%;
+            font-size: 16px;
+            line-height: 30px;
+            margin-top: 29px;
+        }
+        .work_site_content .work_video {
+            width: 60%;
+            padding: 0rem 3rem;
+        }.work_site_content .work_site_text {
+            width: 40%;
+            padding: 0rem 2rem;
+
+        }
+        .work_site_content .work_site_text h2 {
+            font-size: 20px;
+        }
+        .work_site_content .work_site_text span {
+            font-size: 18px;
+            line-height: 39px;
+        }
+    }
+
+
+@media (max-width: 425px) {
+    #menu .links a {
+        letter-spacing: 10px;
+        font-size: 72px;
+        margin: 13px 0;
+    }
+
+    nav .button a {
+        margin: 0px 12px;
+        font-size: 11px;
+        padding: 6px 10px;
+    }
+
+    nav .name_logo {
+        width: 62%;
+    }
+
+    nav .name_logo h1 {
+        font-size: 22px;
+        letter-spacing: 6px;
+    }
+
+    nav .hamburger {
+        left: 89%;
+    }
+
+    nav .hamburger .line {
+        width: 32px;
+        height: 2.5px;
+        margin: 10px 0;
+    }
+
+    #hero .hero_content {
+        padding: 0 8vw;
+    }
+
+    #hero .hero_content h1 {
+        font-size: 25px;
+        letter-spacing: 0px;
+    }
+
+    #hero .hero_content h2 {
+        font-size: 24px;
+        letter-spacing: 0px;
+        text-align: center;
+    }
+
+    #Social_icons .icons a i {
+        font-size: 19px;
+        margin: 0px 3px;
+        top: 97%;
+    }
+
+    #communication_icons .icons {
+        top: 92%;
+        left: 94%;
+    }
+
+    #communication_icons .icons a i {
+        font-size: 19px;
+        margin: 5px 0px;
+    }
+
+    #about_me_heading {
+        height: 75vh;
+    }
+
+    .side_spans {
+        margin: 0 8px;
+        display: none;
+    }
+
+    #about_me_hook {
+        height: 85vh;
+    }
+
+    .about_hook_spans {
+        padding: 100px 0px;
+    }
+
+    .a_heading .about_span {
+        margin-left: 25px;
+    }
+
+    .a_heading span {
+        font-size: 100px;
+        line-height: 189px;
+        letter-spacing: 5px;
+    }
+
+    .a_heading .me_span {
+        margin-right: 218px;
+        font-size: 110px;
+        line-height: 190px;
+        letter-spacing: 8px;
+    }
+
+    .side_spans span {
+        width: 156vw;
+        font-size: 17px;
+    }
+
+    .about_hook_spans span {
+        letter-spacing: 3px;
+    }
+
+    .about_hook_spans .Crafting {
+        font-size: 65px;
+        line-height: 40px;
+        margin-left: 4VW;
+    }
+
+    .about_hook_spans .Premium {
+        font-size: 65px;
+        line-height: 120px;
+        margin-left: 20VW;
+    }
+
+    .about_hook_spans .digital {
+        font-size: 33px;
+        line-height: 35px;
+        margin-left: 3VW;
+    }
+
+    .about_hook_spans .inspired {
+        font-size: 50px;
+        line-height: 124px;
+        margin-left: 3VW;
+    }
+
+    .about_hook_spans .nature {
+        font-size: 80px;
+        line-height: 135px;
+        margin-left: 7VW;
+    }
+
+    .b_coneten {
+        /* height: 100vh; */
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0 7vw;
+        text-align: center;
+    }
+
+    .about_p {
+        width: 100%;
+        font-size: 16px;
+        line-height: 30px;
+    }
+
+    #about_me_content .Strategist {
+        letter-spacing: 0px;
+        font-size: 20px;
+        line-height: 43px;
+    }
+
+    .about_p {
+        width: 100%;
+        font-size: 15px;
+        line-height: 26px;
+        margin-top: 38px;
+    }
+
+    .about_btn {
+        height: 38px;
+        width: 100%;
+        display: flex
+;
+        justify-content: center;
+        align-items: flex-end;
+    }
+
+    .about_btn a span {
+        font-family: var(--Headings-font);
+        color: var(--Grey-Color);
+        display: inline;
+        font-size: 21px;
+        font-weight: 600;
+        text-align: center;
+
+    }
+
+    #skill_heading {
+        height: 70vh;
+    }
+
+    #skill_heading span {
+        font-size: 58px;
+        line-height: 100px;
+        letter-spacing: 3px;
+        -webkit-text-stroke: .9px var(--Secondary-Color);
+    }
+
+    #skill_heading .Mastery {
+        font-size: 58px;
+    }
+
+    .s_l_content {
+        height: 55vh;
+
+    }
+
+    .s_l_heading {
+        font-size: 20px;
+        font-weight: 600;
+        letter-spacing: 2px;
+        margin: 30px 0px;
+        margin-right: 98px;
+    }
+
+    .s_l_content .s_l_colomn .s_l_row span {
+        margin: 0px 11px;
+        font-size: 18px;
+        line-height: 40px;
+    }
+
+    .s_l_content .s_l_colomn .r_s span {
+        margin: 0px 20px;
+    }
+
+    .s_p_heading {
+        font-size: 20px;
+        letter-spacing: 2px;
+        margin: 0px 0px;
+        margin-right: 175px;
+    }
+
+    .s_l_content .s_l_colomn .soft {
+        font-size: 20px;
+        line-height: 80px;
+        font-weight: 500;
+        letter-spacing: 4px;
+        margin-right: 309px;
+    }
+
+    #testimonial {
+        width: 100%;
+        padding: 0 9vw;
+    }
+
+    .tes_content {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .testimonials {
+        width: 100%;
+        text-align: center;
+    }
+
+    .tes {
+        margin: 0;
+        margin: 40px 0;
+    }
+
+    #whyiam {
+        height: 70vh;
+        padding: 20rem 0;
+    }
+
+    #whyiam span {
+        font-size: 27px;
+        line-height: 54px;
+
+    }
+
+    #whyiam2 {
+        padding: 0 7vw;
+    }
+
+    #whyiam2 p {
+        font-size: 19px;
+        line-height: 42px;
+        letter-spacing: 1px;
+    }
+
+    #cta {
+        height: 70vh;
+        padding: 0 7vw;
+    }
+
+    #cta .cta_buttons .now {
+        margin: 0px 8px;
+        font-size: 12px;
+        padding: 4px 11px;
+    }
+
+    #cta .cta_buttons .free {
+        margin: 0px 6px;
+        font-size: 14px;
+    }
+
+    #faq .question {
+        margin: 13px 0;
+    }
+
+    #faq .question span {
+        font-size: 19px;
+        line-height: 30px;
+    }
+
+    #contact a {
+        width: 35vw;
+    }
+
+    #contact span {
+        font-size: 25px;
+        letter-spacing: 1px;
+    }
+
+    #contact a {
+        width: 41vw;
+    }
+    #mypic .my_pic_content .littel_about {
+        width: 80%;
+        padding: 1rem 0;
+    }
+    .littel_about p {
+        font-size: 11px;
+        line-height: 18px;
+    }
+
+    .littel_about span {
+        font-size: 11px;
+        line-height: 20px;
+    }
+
+    #mypic {
+        height: 160vh;
+        padding: 1rem 1.5rem;
+    }
+
+    .pic_p {
+        width: 100%;
+        font-size: 13px;
+        line-height: 26px;
+        padding: 0 0rem;
+        margin-top: 21px;
+    }
+    .about_hook_spans .Elegant {
+        font-size: 36px;
+        line-height: 13px;
+        margin-left: 4VW;
+    }
+    .about_hook_spans .Fusing {
+        font-size: 50px;
+        line-height: 95px;
+    }
+    .about_hook_spans .individuality {
+        font-size: 37px;
+        line-height: 15px;
+        margin-left: 17VW;
+    }
+    .about_hook_spans .hook_p {
+        font-size: 10px;
+        line-height: 17px;
+        margin: 39px 0;
+        margin-left: 49VW;
+        width: 44%;
+    }
+    .about_hook_spans .with {
+        font-size: 40px;
+        line-height: 52px;
+        margin-top: -138px;
+    }
+    .about_hook_spans .collective {
+        font-size: 48px;
+        line-height: 134px;
+    }
+    .about_hook_spans .brilliance {
+        font-size: 60px;
+        line-height: 19px;
+        margin-left: 7VW;
+        margin-top: -20px;
+    }
+    #about_me_content {
+        height: 85vh;
+    }
+    .b_coneten {
+        height: 130vh;
+    }
+
+    .pic_whyiam{
+        height: 50vh!important;
+        padding: 14rem 0!important;
+    }
+    .span_hed  .dic_Strategist {
+        letter-spacing: 1px;
+        font-size: 20px;
+        line-height: 32px;
+        margin: 20px 0;
+    }
+    .span_hed  .dic_innovate {
+        letter-spacing: 1px;
+        font-size: 17px;
+        line-height: 25px;
+        width: 100%;
+    }
+
+    .span_hed  .dog_innovate {
+        letter-spacing: 1px;
+        font-size: 16px;
+        line-height: 26px;
+        width: 100%;
+        margin: 10px 0;
+    }
+    .left .dic_pic {
+        width: 100%;
+        font-size: 14px;
+        line-height: 26px;
+        margin-top: 18px;
+    }
+
+    .work_site_content {
+flex-direction: column;
+        padding: 2rem 1rem;
+        align-items: center;
+    }
+    .column_reverse {
+flex-direction: column-reverse;
+    }
+
+    .work_site_content .work_video {
+        width: 100%;
+        padding: 0rem 3rem;
+    }
+
+    .work_site_content .work_site_text {
+        width: 90%;
+        padding: 0rem 0rem;
+        margin-top: 30px;
+    }    #about_me_content {
+        height: 92vh;
+    }
+
+    .about_btn {
+       display: none;
+    }
+    #hero .hero_content {
+        height: 60vh;
+    }
+
+  
+}
+
+
+@media (max-width: 375px) {
+    #menu .links a {
+        letter-spacing: 8px;
+        font-size: 64px;
+        margin: 20px 0;
+    }
+
+    nav .name_logo {
+        width: 56%;
+    }
+
+    nav .name_logo h1 {
+        font-size: 18px;
+        letter-spacing: 4px;
+    }
+
+    #hero .hero_content h1 {
+        font-size: 22px;
+        letter-spacing: 0px;
+    }
+
+    #hero .hero_content h2 {
+        font-size: 20px;
+    }
+
+    .a_heading span {
+        font-size: 85px;
+        line-height: 189px;
+        letter-spacing: 4px;
+    }
+
+    .a_heading .me_span {
+        margin-right: 205px;
+        font-size: 88px;
+        line-height: 190px;
+        letter-spacing: 5px;
+    }
+
+    .about_hook_spans .Premium {
+        font-size: 63px;
+        line-height: 119px;
+        margin-left: 9VW;
+    }
+
+    .about_hook_spans .digital {
+        font-size: 28px;
+        line-height: 35px;
+        margin-left: 4VW;
+    }
+
+    .about_hook_spans .nature {
+        font-size: 73px;
+        line-height: 135px;
+        margin-left: 9VW;
+    }
+
+    #about_me_content .Strategist {
+        letter-spacing: 0px;
+        font-size: 17px;
+        line-height: 48px;
+    }
+
+    #about_me_content .innovate {
+        letter-spacing: 0px;
+        font-size: 18px;
+        line-height: 4px;
+    }
+
+    .about_p {
+        width: 100%;
+        font-size: 12px;
+        line-height: 23px;
+        margin-top: 30px;
+    }
+
+    #skill_heading span {
+        font-size: 50px;
+        line-height: 90px;
+        letter-spacing: 3px;
+        -webkit-text-stroke: .9px var(--Secondary-Color);
+    }
+    #s_p_content {
+        height: 80vh;
+
+    }
+    .s_l_heading {
+        font-size: 18px;
+        font-weight: 600;
+        letter-spacing: 2px;
+        margin: 30px 0px;
+        margin-right: 65px;
+    }
+
+    .s_p_heading {
+        font-size: 18px;
+        letter-spacing: 4px;
+        margin: 0px 0px;
+        margin-right: 113px;
+    }
+
+    .s_l_content .s_l_colomn .s_l_row span {
+        margin: 0px 4px;
+        font-size: 17px;
+        line-height: 40px;
+    }
+
+    .s_l_content .s_l_colomn .soft {
+        font-size: 19px;
+        line-height: 87px;
+        font-weight: 500;
+        letter-spacing: 6px;
+        margin-right: 274px;
+    }
+
+    .s_l_content .s_l_colomn .r_s span {
+        margin: 0px 14px;
+    }
+
+    #whyiam span {
+        font-size: 24px;
+        line-height: 47px;
+    }
+
+
+    #hero .hero_content {
+        height: 65vh;
+    }
+    #whyiam2 p {
+        font-size: 18px;
+        line-height: 37px;
+        letter-spacing: 1px;
+    }
+
+    #cta h5 {
+        font-size: 22px;
+        line-height: 37px;
+        letter-spacing: 1px;
+    }
+
+    #cta .cta_buttons .free {
+        margin: 0px 4px;
+        font-size: 13px;
+    }
+
+    #faq .question span {
+        font-size: 17px;
+        line-height: 28px;
+    }
+
+    #faq .answer span {
+        font-size: 18px;
+    }
+
+
+    #contact span {
+        font-size: 21px;
+        letter-spacing: 1px;
+    }
+
+    #contact a {
+        width: 48vw;
+    }
+    .about_hook_spans .Elegant {
+        font-size: 32px;
+        line-height: 13px;
+        margin-left: 4VW;
+    }
+    .about_hook_spans .Fusing {
+        font-size: 42px;
+        line-height: 65px;
+    }
+    .about_hook_spans .individuality {
+        font-size: 33px;
+        line-height: 14px;
+        margin-left: 15VW;
+    }
+    .about_hook_spans .hook_p {
+        font-size: 9px;
+        line-height: 15px;
+        margin: 40px 0;
+        margin-left: 48VW;
+        width: 44%;
+        margin-top: 18px;
+    }
+    .about_hook_spans .with {
+        font-size: 43px;
+        line-height: 50px;
+        margin-top: -105px;
+    }
+    .about_hook_spans .collective {
+        font-size: 40px;
+        line-height: 82px;
+    }
+    .about_hook_spans .brilliance {
+        font-size: 49px;
+        line-height: 51px;
+        margin-left: 7VW;
+    }
+    .span_hed  .dic_Strategist {
+        letter-spacing: 1px;
+        font-size: 18px;
+        line-height: 28px;
+        margin: 20px 0;
+    }
+    .span_hed  .dic_innovate {
+        letter-spacing: 1px;
+        font-size: 16px;
+        line-height: 24px;
+        width: 100%;
+    }
+
+    .span_hed  .dog_innovate {
+        letter-spacing: 1px;
+        font-size: 15px;
+        line-height: 26px;
+        width: 100%;
+        margin: 10px 0;
+    }
+    .left .dic_pic {
+        width: 100%;
+        font-size: 12px;
+        line-height: 27px;
+        margin-top: 18px;
+    }
+    .work_site_content .work_video {
+        width: 100%;
+        padding: 0rem 2rem;
+    }
+}
+
+@media (max-width: 320px) {
+
+    nav .button a {
+        margin: 0px 8px;
+        font-size: 9px;
+        padding: 5px 7px;
+    }
+
+    nav .name_logo h1 {
+        font-size: 17px;
+        letter-spacing: 3px;
+    }
+
+    nav .hamburger .line {
+        width: 28px;
+        height: 2px;
+        margin: 10px 0;
+    }
+
+    nav .hamburger {
+        left: 88%;
+    }
+
+    #menu .links a {
+        letter-spacing: 6px;
+        font-size: 60px;
+        margin: 20px 0;
+    }
+
+    #hero .hero_content h1 {
+        font-size: 19px;
+        letter-spacing: 0px;
+    }
+
+    #hero .hero_content h2 {
+        font-size: 17px;
+    }
+
+    #communication_icons .icons {
+        top: 92%;
+        left: 92%;
+    }
+    #about_me_heading {
+        height: 60vh;
+    }
+    .a_heading span {
+        font-size: 75px;
+        letter-spacing: 3px;
+        margin-left: 15px;
+    }
+
+    .a_heading .me_span {
+        margin-right: 200px;
+        font-size: 77px;
+        letter-spacing: 3px;
+    }
+
+    .about_hook_spans .Crafting {
+        font-size: 53px;
+        line-height: 23px;
+        margin-left: 4VW;
+    }
+
+    .about_hook_spans .Premium {
+        font-size: 53px;
+        line-height: 98px;
+        margin-left: 9VW;
+    }
+
+    .about_hook_spans .digital {
+        font-size: 23px;
+        line-height: 38px;
+        margin-left: 5VW;
+    }
+
+    .about_hook_spans .inspired {
+        font-size: 43px;
+        line-height: 126px;
+        margin-left: 4VW;
+    }
+
+    .about_hook_spans .nature {
+        font-size: 64px;
+        line-height: 135px;
+        margin-left: 7VW;
+    }
+
+    #about_me_content .Strategist {
+        font-size: 16px;
+    }
+
+    #about_me_content .innovate {
+        letter-spacing: 0px;
+        font-size: 17px;
+        line-height: 6px;
+    }
+
+    .about_p {
+        width: 100%;
+        font-size: 11px;
+        line-height: 22px;
+        margin-top: 28px;
+    }
+
+    #skill_heading span {
+        font-size: 42px;
+        line-height: 88px;
+    }
+
+    #skill_heading .Mastery {
+        font-size: 42px;
+    }
+    #s_p_content {
+        height: 75vh;
+    }
+    .s_l_heading {
+        font-size: 17px;
+        letter-spacing: 1px;
+        margin-right: 0px;
+        text-align: center;
+    }
+
+    .s_p_heading {
+        font-size: 18px;
+        letter-spacing: 1px;
+        margin-right: 0px;
+        text-align: center;
+    }
+
+    .s_l_content .s_l_colomn .s_l_row span {
+        margin: 0px 2px;
+        font-size: 15px;
+        line-height: 36px;
+    }
+
+    .s_l_content .s_l_colomn .soft {
+        margin-right: 217px;
+    }
+
+    .s_l_content .s_l_colomn .r_s span {
+        margin: 0px 13px;
+    }
+
+    .tes h2 {
+        font-size: 16px;
+        letter-spacing: 3px;
+    }
+    .tes p {
+        font-size: 12px;
+        line-height: 21px;
+        margin: 2px 0;
+    }
+    .tes h3 {
+        font-size: 13px;
+        line-height: 16px;
+    }    #whyiam {
+        height: 65vh;
+        padding: 5rem 0;
+    }
+    #whyiam span {
+        font-size: 21px;
+        line-height: 39px;
+    }
+    #whyiam2 p {
+        font-size: 15px;
+        line-height: 33px;
+        letter-spacing: 1px;
+    }
+    #cta h5 {
+        font-size: 18px;
+        line-height: 33px;
+        letter-spacing: 1px;
+    }
+    #cta .cta_buttons .now {
+        margin: 0px 8px;
+        font-size: 10px;
+        padding: 4px 9px;
+    }
+    #cta .cta_buttons .free {
+        margin: 0px 0px;
+        font-size: 11px;
+    }
+    #contact span {
+        font-size: 18px;
+
+    }
+    #contact a {
+        font-size: 21px;
+        line-height: 19px;
+        width: 50vw;
+    }
+
+    .about_hook_spans .Elegant {
+        font-size: 27px;
+        line-height: 17px;
+        margin-left: 4VW;
+    }
+    .about_hook_spans .Fusing {
+        font-size: 40px;
+        line-height: 65px;
+    }
+    .about_hook_spans .individuality {
+        font-size: 32px;
+        line-height: 15px;
+        margin-left: 5VW;
+    }
+    .about_hook_spans .with {
+        font-size: 40px;
+        line-height: 49px;
+        margin-top: -105px;
+    }
+    .about_hook_spans .collective {
+        font-size: 37px;
+        line-height: 82px;
+    }
+    .about_hook_spans .brilliance {
+        font-size: 45px;
+        line-height: 36px;
+        margin-left: 4VW;
+    }
+    .span_hed .dic_innovate {
+        letter-spacing: 1px;
+        font-size: 15px;
+        line-height: 22px;
+        width: 100%;
+    }
+
+    .span_hed .dog_innovate {
+        letter-spacing: 1px;
+        font-size: 14px;
+        line-height: 24px;
+        width: 100%;
+        margin: 10px 0px;
+    }
+    .left .dic_pic {
+        width: 100%;
+        font-size: 11px;
+        line-height: 25px;
+        margin-top: 15px;
+    }
+
+    #contact {
+        height: 30vh;
+    }
+}
+@media (max-width: 280px) {
+
+    nav .button a {
+        margin: 0px 6px;
+        font-size: 9px;
+        padding: 5px 5px;
+    }
+    nav .name_logo h1 {
+        font-size: 17px;
+        letter-spacing: 3px;
+    }
+
+    nav .hamburger .line {
+        width: 26px;
+        height: 2px;
+        margin: 10px 0;
+    }
+    nav .hamburger {
+        left: 89%;
+        top: 3%;
+    }
+
+    #menu .links a {
+        letter-spacing: 3px;
+        font-size: 57px;
+        margin: 26px 0;
+    }
+
+    #hero .hero_content h1 {
+        font-size: 16px;
+        letter-spacing: 0px;
+    }
+
+    #hero .hero_content h2 {
+        font-size: 13px;
+    }
+
+    #communication_icons .icons {
+        top: 92%;
+        left: 92%;
+    }
+    #about_me_heading {
+        height: 60vh;
+    }  
+      #about_me_heading {
+        height: 60vh;
+    }
+    .a_heading .about_span {
+        margin-left: 15px;
+        font-size: 66px;
+        letter-spacing: 2px;
+        line-height: 137px;
+    }
+    .a_heading .me_span {
+        margin-right: 141px;
+        font-size: 70px;
+        letter-spacing: 6px;
+    }
+
+
+    .about_hook_spans .Crafting {
+        font-size: 45px;
+        line-height: 15px;
+        margin-left: 5VW;
+    }
+
+    .about_hook_spans .Premium {
+        font-size: 47px;
+        line-height: 98px;
+        margin-left: 9VW;
+    }
+
+    .about_hook_spans .digital {
+        font-size: 27px;
+        line-height: 38px;
+        margin-left: 5VW;
+        text-align: center;
+    }
+    .about_hook_spans .inspired {
+        font-size: 34px;
+        line-height: 94px;
+        margin-left: 4VW;
+    }
+    .about_hook_spans .nature {
+        font-size: 58px;
+        line-height: 115px;
+        margin-left: 6VW;
+    }
+    .about_hook_spans {
+        padding: 82px 0px;
+    }
+    #about_me_hook {
+        height: 71vh;
+    }
+
+
+
+    #about_me_content .Strategist {
+        font-size: 13px;
+    }
+
+    #about_me_content .innovate {
+        letter-spacing: 0px;
+        font-size: 16px;
+        line-height: 3px;
+    }
+
+    .about_p {
+        width: 100%;
+        font-size: 11px;
+        line-height: 22px;
+        margin-top: 28px;
+    }
+    #skill_heading {
+        height: 59vh;
+    }
+    #skill_heading span {
+        font-size: 35px;
+        line-height: 76px;
+    }
+
+    #skill_heading .Mastery {
+        font-size: 44px;
+    }
+    #s_l {
+        height: 45vh;
+    }
+    .s_l_heading {
+        font-size: 17px;
+        letter-spacing: 1px;
+        margin-right: 0px;
+        text-align: center;
+    }
+
+    .s_p_heading {
+        font-size: 18px;
+        letter-spacing: 1px;
+        margin-right: 0px;
+        text-align: center;
+    }
+
+    .s_l_content .s_l_colomn .s_l_row span {
+        margin: 0px 2px;
+        font-size: 12px;
+        line-height: 36px;
+    }
+
+    .s_l_content .s_l_colomn .soft {
+        margin-right: 173px;
+    }
+
+    .s_l_content .s_l_colomn .r_s span {
+        margin: 0px 9px;
+    }#s_p_content {
+        height: 80vh;
+     
+    }
+    .tes h2 {
+        font-size: 16px;
+        letter-spacing: 3px;
+    }
+    .tes p {
+        font-size: 12px;
+        line-height: 21px;
+        margin: 2px 0;
+    }
+    .tes h3 {
+        font-size: 13px;
+        line-height: 16px;
+    }
+    #whyiam {
+        height: 77vh;
+        padding: 3rem 0;
+    }
+    #whyiam span {
+        font-size: 17px;
+        line-height: 33px;
+    }
+    #whyiam2 p {
+        font-size: 15px;
+        line-height: 33px;
+        letter-spacing: 1px;
+    }
+    #cta h5 {
+        font-size: 16px;
+        line-height: 27px;
+        letter-spacing: 0px;
+    }
+    #cta .cta_buttons .now {
+        margin: 0px 6px;
+        font-size: 9px;
+        padding: 3px 7px;
+    }
+    #cta .cta_buttons .free {
+        margin: 0px 0px;
+        font-size: 9px;
+    }
+    #contact span {
+        font-size: 16px;
+    }
+    #contact a {
+        font-size: 18px;
+        line-height: 16px;
+        width: 50vw;
+    }
+    .work_site_content .work_video {
+        width: 100%;
+        padding: 0rem 1rem;
+    }
+
+    .about_hook_spans .Elegant {
+        font-size: 23px;
+        line-height: 17px;
+        margin-left: 4VW;
+    }
+    .about_hook_spans .Fusing {
+        font-size: 38px;
+        line-height: 65px;
+    }
+    .about_hook_spans .individuality {
+        font-size: 28px;
+        line-height: 17px;
+        margin-left: 5VW;
+    }
+    .about_hook_spans .with {
+        font-size: 36px;
+        line-height: 46px;
+        margin-top: -112px;
+    }
+    .about_hook_spans .hook_p {
+        font-size: 8px;
+        line-height: 15px;
+        margin: 51px 0;
+        margin-left: 49VW;
+        width: 44%;
+        margin-top: 14px;
+    }
+    .about_hook_spans .collective {
+        font-size: 32px;
+        line-height: 82px;
+    }
+    .about_hook_spans .brilliance {
+        font-size: 39px;
+        line-height: 38px;
+        margin-left: 4VW;
+    }
+    .left .dic_pic {
+        width: 100%;
+        font-size: 10px;
+        line-height: 25px;
+        margin-top: 8px;
+    }
+    .span_hed .dog_innovate {
+        letter-spacing: 1px;
+        font-size: 11px;
+        line-height: 22px;
+        width: 100%;
+        margin: 10px 0px;
+    }
+    #about_me_content {
+        height: 92vh;
+    }
+
+    .tes_kuta{
+        margin-top: 100px;
+    }
+}
